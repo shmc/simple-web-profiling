@@ -1,4 +1,4 @@
-package com.pararede.profiling.memory;
+package com.google.code.profiling.memory;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

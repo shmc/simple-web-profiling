@@ -1,10 +1,13 @@
-package com.pararede.profiling.memory;
+package com.google.code.profiling.memory;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**
+ * Bean to contain information about the pages profiled
+ */
 public class ProfilingMemoryBean implements Serializable {
 
     private static final long serialVersionUID = 3467875415909108916L;

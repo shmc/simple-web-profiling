@@ -1,4 +1,4 @@
-package com.pararede.profiling.timer;
+package com.google.code.profiling.timer;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,9 +7,6 @@ import java.util.List;
 
 /**
  * Bean to contain information about the pages profiled
- *
- * @author <a href="mailto:mike@atlassian.com">Mike Cannon-Brookes</a>
- * @author <a href="mailto:scott@atlassian.com">Scott Farquhar</a>
  */
 public class ProfilingTimerBean implements Serializable {
 
