@@ -1,7 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?><project>
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>pararede</groupId>
-  <artifactId>simple-web-profiling</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <description>Simple library for Web Application profiling</description>
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>pararede</groupId>
+	<artifactId>simple-web-profiling</artifactId>
+	<version>1.0.0</version>
+	<description>
+		Simple library for Web Application profiling
+	</description>
+	<packaging>jar</packaging>
+	<developers>
+		<developer>
+			<name>Sérgio Montelobo</name>
+			<id>scorreia</id>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
+	<dependencies>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.3</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<sourceDirectory>src/java</sourceDirectory>
+	</build>
 </project>
