@@ -4,14 +4,19 @@
 	<groupId>com.google.code.profiling</groupId>
 	<artifactId>simple-web-profiling</artifactId>
 	<version>1.0.0</version>
-	<description>
-		Simple library for Web Application profiling
-	</description>
+	<description> Simple library for Web Application profiling</description>
 	<packaging>jar</packaging>
 	<developers>
 		<developer>
 			<name>Sérgio Montelobo</name>
 			<id>sergiomontelobo</id>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+		<developer>
+			<name>João Simas</name>
+			<id>jsimas</id>
 			<roles>
 				<role>Developer</role>
 			</roles>
