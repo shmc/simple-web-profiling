@@ -23,7 +23,7 @@ import com.google.code.profiling.memory.UtilMemoryStack;
  * <pre>
  *   &lt;filter&gt;
  *      &lt;filter-name&gt;profiling&lt;/filter-name&gt;
- *      &lt;filter-class&gt;com.pararede.profiling.filters.ProfilingMemoryFilter&lt;/filter-class&gt;
+ *      &lt;filter-class&gt;com.google.code.profiling.filters.ProfilingMemoryFilter&lt;/filter-class&gt;
  *         &lt;init-param&gt;
  *             &lt;param-name&gt;min.memory&lt;/param-name&gt;
  *             &lt;param-value&gt;0&lt;/param-value&gt;
