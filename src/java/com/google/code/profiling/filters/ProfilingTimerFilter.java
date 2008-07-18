@@ -23,7 +23,7 @@ import com.google.code.profiling.timer.UtilTimerStack;
  * <pre>
  *   &lt;filter&gt;
  *      &lt;filter-name&gt;profiling&lt;/filter-name&gt;
- *      &lt;filter-class&gt;com.pararede.profiling.filters.ProfilingTimerFilter&lt;/filter-class&gt;
+ *      &lt;filter-class&gt;com.google.code.profiling.filters.ProfilingTimerFilter&lt;/filter-class&gt;
  *      &lt;init-param&gt;
  *             &lt;param-name&gt;min.time&lt;/param-name&gt;
  *             &lt;param-value&gt;0&lt;/param-value&gt;
