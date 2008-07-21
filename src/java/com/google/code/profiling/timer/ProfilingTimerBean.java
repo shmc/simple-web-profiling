@@ -67,8 +67,7 @@ public class ProfilingTimerBean implements Serializable {
 
 			Iterator childrenIt = this.children.iterator();
 			while (childrenIt.hasNext()) {
-				buffer.append(((ProfilingTimerBean) childrenIt.next())
-						.getPrintable(indent + "  ", minTime));
+				buffer.append(((ProfilingTimerBean) childrenIt.next()).getPrintable(indent + "  ", minTime));
 			}
 
 			return buffer.toString();

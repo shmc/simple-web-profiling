@@ -67,8 +67,7 @@ public class ProfilingMemoryBean implements Serializable {
 
 			Iterator childrenIt = this.children.iterator();
 			while (childrenIt.hasNext()) {
-				buffer.append(((ProfilingMemoryBean) childrenIt.next())
-						.getPrintable(indent + "  ", minMemory));
+				buffer.append(((ProfilingMemoryBean) childrenIt.next()).getPrintable(indent + "  ", minMemory));
 			}
 
 			return buffer.toString();

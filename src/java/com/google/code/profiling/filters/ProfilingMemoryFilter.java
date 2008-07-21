@@ -61,14 +61,12 @@ public class ProfilingMemoryFilter implements Filter {
 	 * then pass to filter chain. If current state is on - record start time,
 	 * pass to filter chain, and then record total time on the return.
 	 */
-	public void doFilter(ServletRequest request, ServletResponse response,
-			FilterChain chain) throws java.io.IOException,
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws java.io.IOException,
 			javax.servlet.ServletException {
 		String resource = null;
 		// if an include file then get the proper resource name.
 		if (request.getAttribute("javax.servlet.include.request_uri") != null) {
-			resource = (String) request
-					.getAttribute("javax.servlet.include.request_uri");
+			resource = (String) request.getAttribute("javax.servlet.include.request_uri");
 		} else {
 			resource = ((HttpServletRequest) request).getRequestURI();
 		}
@@ -87,8 +85,7 @@ public class ProfilingMemoryFilter implements Filter {
 	}
 
 	public void init(FilterConfig filterConfig) throws ServletException {
-		long minMemory = NumberUtils.toLong(filterConfig
-				.getInitParameter(MIN_MEMORY_PARAM), 0);
+		long minMemory = NumberUtils.toLong(filterConfig.getInitParameter(MIN_MEMORY_PARAM), 0);
 		this.utilMemoryStack = new UtilMemoryStack(minMemory);
 	}
 

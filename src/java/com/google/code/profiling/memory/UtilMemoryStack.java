@@ -51,8 +51,7 @@ public class UtilMemoryStack {
 
 		// if the memories are matched up with each other (ie push("a");
 		// pop("a"));
-		if ((currentMemory != null) && (name != null)
-				&& name.equals(currentMemory.getResource())) {
+		if ((currentMemory != null) && (name != null) && name.equals(currentMemory.getResource())) {
 			currentMemory.setEndMemory();
 			ProfilingMemoryBean parent = currentMemory.getParent();
 			// if we are the root memory, then print out the memories
@@ -68,10 +67,7 @@ public class UtilMemoryStack {
 			if (currentMemory != null) {
 				printMemory(currentMemory);
 				current.set(null); // prevent printing multiple times
-				log
-						.warn("Unmatched Memory.  Was expecting "
-								+ currentMemory.getResource()
-								+ ", instead got " + name);
+				log.warn("Unmatched Memory.  Was expecting " + currentMemory.getResource() + ", instead got " + name);
 			}
 		}
 	}
