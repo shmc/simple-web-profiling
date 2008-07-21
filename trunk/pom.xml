@@ -6,6 +6,8 @@
 	<groupId>com.google.code.profiling</groupId>
 	<artifactId>simple-web-profiling</artifactId>
 	<version>1.0.0</version>
+	<name>Simple Web Profiling</name>
+	<inceptionYear>2008</inceptionYear>
 	<description>
 		Simple library for Web Application profiling
 	</description>
