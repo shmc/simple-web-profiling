@@ -5,15 +5,12 @@
 	<version>1.0.1</version>
 	<name>Simple Web Profiling</name>
 	<inceptionYear>2008</inceptionYear>
-	<description>
-		Simple library for Web Application profiling
-	</description>
+	<description>Simple library for Web Application profiling</description>
 	<packaging>jar</packaging>
 	<url>http://code.google.com/p/simple-web-profiling/</url>
 	<scm>
-		<developerConnection>
-			https://simple-web-profiling.googlecode.com/svn/trunk/
-		</developerConnection>
+		<connection>https://simple-web-profiling.googlecode.com/svn/trunk/</connection>
+		<developerConnection>https://simple-web-profiling.googlecode.com/svn/trunk/</developerConnection>
 		<url>
 			http://code.google.com/p/simple-web-profiling/source/browse
 		</url>
@@ -59,10 +56,17 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.2</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<build>
 		<sourceDirectory>src/java</sourceDirectory>
 		<testSourceDirectory>test/java</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.2</version>
+			</plugin>
+		</plugins>
 	</build>
 </project>
