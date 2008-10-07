@@ -74,21 +74,21 @@ public class ProfilingMemoryBean implements Serializable {
      * Get a formatted string representing all the methods that took longer than a specified time.
      */
     public void print(long minMemory) {
-	print("", minMemory);
+	// only print the value if we are larger or equal to the min memory.
+	if (this.totalMemory >= minMemory) {
+	    print("", minMemory);
+	}
     }
 
     protected void print(String indent, long minMemory) {
-	// only print the value if we are larger or equal to the min time.
-	if (this.totalMemory >= minMemory) {
-	    StringBuffer buffer = new StringBuffer();
-	    buffer.append(indent);
-	    buffer.append("[" + this.totalMemory + " KB] - " + this.resource);
-	    log.info(buffer.toString());
+	StringBuffer buffer = new StringBuffer();
+	buffer.append(indent);
+	buffer.append("[" + this.totalMemory + " KB] - " + this.resource);
+	log.info(buffer.toString());
 
-	    Iterator childrenIt = this.children.iterator();
-	    while (childrenIt.hasNext()) {
-		((ProfilingMemoryBean) childrenIt.next()).print(indent + "  ", minMemory);
-	    }
+	Iterator childrenIt = this.children.iterator();
+	while (childrenIt.hasNext()) {
+	    ((ProfilingMemoryBean) childrenIt.next()).print(indent + "  ", minMemory);
 	}
     }
 }

@@ -74,21 +74,21 @@ public class ProfilingTimerBean implements Serializable {
      * Get a formatted string representing all the methods that took longer than a specified time.
      */
     public void print(long minTime) {
-	print("", minTime);
+	// only print the value if we are larger or equal to the min time.
+	if (this.totalTime >= minTime) {
+	    print("", minTime);
+	}
     }
 
     protected void print(String indent, long minTime) {
-	// only print the value if we are larger or equal to the min time.
-	if (this.totalTime >= minTime) {
-	    StringBuffer buffer = new StringBuffer();
-	    buffer.append(indent);
-	    buffer.append("[" + this.totalTime + " ms] - " + this.resource);
-	    log.info(buffer.toString());
+	StringBuffer buffer = new StringBuffer();
+	buffer.append(indent);
+	buffer.append("[" + this.totalTime + " ms] - " + this.resource);
+	log.info(buffer.toString());
 
-	    Iterator childrenIt = this.children.iterator();
-	    while (childrenIt.hasNext()) {
-		((ProfilingTimerBean) childrenIt.next()).print(indent + "  ", minTime);
-	    }
+	Iterator childrenIt = this.children.iterator();
+	while (childrenIt.hasNext()) {
+	    ((ProfilingTimerBean) childrenIt.next()).print(indent + "  ", minTime);
 	}
     }
 }

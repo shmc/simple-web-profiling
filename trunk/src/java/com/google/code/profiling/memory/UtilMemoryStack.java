@@ -66,7 +66,7 @@ public class UtilMemoryStack {
 	ProfilingMemoryBean currentMemory = (ProfilingMemoryBean) current.get();
 
 	// if the memories are matched up with each other (ie push("a"); pop("a"));
-	if ((currentMemory != null) && (name != null) && name.equals(currentMemory.getResource())) {
+	if (currentMemory != null && name != null && name.equals(currentMemory.getResource())) {
 	    currentMemory.setEndMemory();
 	    ProfilingMemoryBean parent = currentMemory.getParent();
 	    // if we are the root memory, then print out the memories
