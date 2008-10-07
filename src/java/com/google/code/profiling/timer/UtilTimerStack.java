@@ -65,9 +65,8 @@ public class UtilTimerStack {
     public void pop(String name) {
 	ProfilingTimerBean currentTimer = (ProfilingTimerBean) current.get();
 
-	// if the timers are matched up with each other (ie push("a");
-	// pop("a"));
-	if ((currentTimer != null) && (name != null) && name.equals(currentTimer.getResource())) {
+	// if the timers are matched up with each other (ie push("a"); pop("a"));
+	if (currentTimer != null && name != null && name.equals(currentTimer.getResource())) {
 	    currentTimer.setEndTime();
 	    ProfilingTimerBean parent = currentTimer.getParent();
 	    // if we are the root timer, then print out the times

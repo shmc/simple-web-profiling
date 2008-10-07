@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.google.code.profiling</groupId>
 	<artifactId>simple-web-profiling</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<name>Simple Web Profiling</name>
 	<inceptionYear>2008</inceptionYear>
 	<description>Simple library for Web Application profiling</description>
