@@ -50,18 +50,6 @@ import com.google.code.profiling.memory.UtilMemoryStack;
  *      &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
  *  &lt;/filter-mapping&gt;
  * </pre>
- * 
- * <p>
- * With the above settings you can turn the filter on by accessing any URL with the parameter
- * <code>profilingfilter=on</code>.eg:
- * 
- * <pre>
- *     http://mywebsite.com/a.jsp?&lt;b&gt;&lt;i&gt;profilingfilter=on&lt;/i&gt;&lt;/b&gt;
- * </pre>
- * 
- * <p>
- * The above settings also sets the filter to not start automatically upon startup. This may be
- * useful for production, but you will most likely want to set this true in development.
  */
 public class ProfilingMemoryFilter implements Filter {
 
