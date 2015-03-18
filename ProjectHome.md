@@ -1,0 +1,1 @@
+This library intends to be a simple and pragmatic way to measure time and memory consumption in Java Web Applications.
